@@ -191,9 +191,9 @@ nav a:first-of-type{margin-left:auto}nav a:last-of-type{margin-right:auto}
 .ph-l img{object-position:56% 50%}
 .ph figcaption{position:absolute;left:-10px;bottom:-16px;background:var(--paper);color:var(--ink);border:3px solid var(--ink);padding:5px 14px;font:400 clamp(14px,1.4vw,18px)/1.3 "Mochiy Pop One","Noto Sans TC",sans-serif}
 .ph-r figcaption{left:auto;right:-10px}
-@media (max-width:860px){.inter .num{font-size:clamp(52px,15vw,96px)}.interGrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.interMid{grid-column:1/-1;order:-1}.ph figcaption{left:-4px;bottom:-12px;padding:4px 10px}.ph-r figcaption{right:-4px}}
+@media (max-width:860px){.inter .num{font-size:clamp(28px,8.4vw,60px)}.interGrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.interMid{grid-column:1/-1;order:-1}.ph figcaption{left:-4px;bottom:-12px;padding:4px 10px}.ph-r figcaption{right:-4px}}
 @media (prefers-reduced-motion:reduce){.ph{opacity:1;transition:none}.ph-l{transform:rotate(-3deg)}.ph-r{transform:rotate(3deg)}}
-.inter .num{font:400 clamp(38px,5.2vw,80px)/1.15 "Dela Gothic One","Noto Sans TC",sans-serif;letter-spacing:.03em;white-space:nowrap;color:var(--acc);
+.inter .num{font:400 clamp(22px,2.9vw,40px)/1.3 "Dela Gothic One","Noto Sans TC",sans-serif;letter-spacing:.03em;white-space:nowrap;color:var(--acc);
  opacity:0;transform:scale(.55) rotate(-4deg);transition:transform .7s cubic-bezier(.3,1.6,.5,1),opacity .4s}
 .inter .num.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.inter .num{opacity:1;transform:none;transition:none}}
@@ -333,7 +333,7 @@ footer a{color:#5fd0f3}
   <p class="lede wide">競選期間，至少有五位候選人在公開場合引用動畫或漫畫台詞，橫跨民進黨、國民黨與民眾黨。<br>他們借用角色的話，說的其實是自己對城市的想像。</p>
   <div class="stack" id="panels">
     <article class="panel" style="--i:0">
-      <div class="pq"><div class="bubble">「因為大家一起旅行，才更有意義啊。」<span class="by">——《葬送的芙莉蓮》欣梅爾</span></div></div>
+      <div class="pq"><div class="bubble">「因為大家一起旅行，才更有意義啊。」<span class="by">——《葬送的芙莉蓮》芙莉蓮</span></div></div>
       <div class="pinfo">
         <div class="pid">
           <div class="face"><img src="images/1.jpg" alt="蘇巧慧的競選形象照" decoding="async" style="width:270%;left:-82.3%;top:-63.4%"></div>
@@ -342,7 +342,7 @@ footer a{color:#5fd0f3}
             <div class="who">蘇巧慧<br><small>新北市長候選人</small></div>
           </div>
         </div>
-        <p>出席第 25 屆漫畫博覽會開幕記者會時引用勇者欣梅爾的這句話，表示努力的過程有人同行才更有價值，並說自己正在組建團隊、聚合人才，希望讓新北 29 區從衛星變成繁星。她也提出推動本土與跨國 IP 合作、發展 ACGN 延伸的體驗經濟等政見。</p>
+        <p>出席第 25 屆漫畫博覽會開幕記者會時引用主角芙莉蓮的這句話，表示努力的過程有人同行才更有價值，並說自己正在組建團隊、聚合人才，希望讓新北 29 區從衛星變成繁星。她也提出推動本土與跨國 IP 合作、發展 ACGN 延伸的體驗經濟等政見。</p>
       </div>
     </article>
     <article class="panel" style="--i:1">
@@ -441,8 +441,8 @@ footer a{color:#5fd0f3}
       <figcaption>沈伯洋</figcaption>
     </figure>
     <div class="interMid">
-      <div class="num" id="frieren">欣梅爾</div>
-      <p class="lede" style="margin:0 auto;text-align:center">《葬送的芙莉蓮》的勇者欣梅爾，<br>是競選期間最常出現的角色：<br>蘇巧慧引用他的話，<br>沈伯洋與莊競程在萬聖節扮成他。</p>
+      <div class="num" id="frieren">《葬送的芙莉蓮》</div>
+      <p class="lede" style="margin:0 auto;text-align:center">是競選期間最常出現的作品：<br>蘇巧慧引用芙莉蓮的話，<br>沈伯洋與莊競程扮成勇者欣梅爾。</p>
     </div>
     <figure class="ph ph-r">
       <img src="images/chuang.jpg" width="1567" height="1045" loading="lazy" alt="莊競程扮成勇者欣梅爾，在舞台上與其他扮裝者一起比愛心">
@@ -501,17 +501,18 @@ footer a{color:#5fd0f3}
 <!-- 角色相牆 -->
 <section class="band" id="chars"><div class="wrap">
   <h2>不熟動漫？點一點角色就知道</h2>
-  <p class="lede wide">本屆選舉中，候選人引用台詞或扮演的動漫角色共 9 位，其中 7 位來自日本作品、2 位來自美國作品。</p>
+  <p class="lede wide">本屆選舉中，候選人引用台詞或扮演的動漫角色共 10 位，其中 8 位來自日本作品、2 位來自美國作品。</p>
   <div class="drift" id="drift">
-    <button class="dr" type="button" data-i="0" aria-label="查看欣梅爾的資料"><span class="drc"><img src="images/chars/himmel.jpg" alt="欣梅爾的動畫畫面" decoding="async" style="object-position:50% 36%;transform-origin:50% 36%;--z:1.2"></span></button>
-    <button class="dr" type="button" data-i="1" aria-label="查看琪琪的資料"><span class="drc"><img src="images/chars/kiki.jpg" alt="琪琪騎著掃帚，吉吉在背後" decoding="async" style="object-position:50% 40%;transform-origin:50% 40%;--z:1.35"></span></button>
-    <button class="dr" type="button" data-i="2" aria-label="查看巴斯光年的資料"><span class="drc"><img src="images/chars/buzz.jpg" alt="巴斯光年展翅飛行" decoding="async" style="object-position:51% 38%;transform-origin:51% 36%;--z:1.6"></span></button>
-    <button class="dr" type="button" data-i="3" aria-label="查看星矢的資料"><span class="drc"><img src="images/chars/seiya.jpg" alt="穿著射手座黃金聖衣拉弓的星矢" decoding="async" style="object-position:24% 46%;transform-origin:24% 46%;--z:1.25"></span></button>
-    <button class="dr" type="button" data-i="4" aria-label="查看千手柱間的資料"><span class="drc"><img src="images/chars/hashirama.jpg" alt="千手柱間結印" decoding="async" style="object-position:60% 40%;transform-origin:60% 40%;--z:1.15"></span></button>
-    <button class="dr" type="button" data-i="5" aria-label="查看歐爾麥特的資料"><span class="drc"><img src="images/chars/allmight.jpg" alt="歐爾麥特高舉手臂微笑" decoding="async" style="object-position:58% 40%;transform-origin:58% 40%;--z:1.0"></span></button>
-    <button class="dr" type="button" data-i="6" aria-label="查看月野兔的資料"><span class="drc"><img src="images/chars/sailormoon.jpg" alt="美少女戰士擺出招牌姿勢" decoding="async" style="object-position:52% 42%;transform-origin:52% 42%;--z:1.05"></span></button>
-    <button class="dr" type="button" data-i="7" aria-label="查看奇異博士的資料"><span class="drc"><img src="images/chars/strange.jpg" alt="奇異博士站在魔法圓環前" decoding="async" style="object-position:52% 30%;transform-origin:52% 30%;--z:1.0"></span></button>
-    <button class="dr" type="button" data-i="8" aria-label="查看春風DoReMi的資料"><span class="drc"><img src="images/chars/doremi.jpg" alt="小魔女DoReMi施展魔法" decoding="async" style="object-position:46% 46%;transform-origin:46% 46%;--z:1.0"></span></button>
+    <button class="dr" type="button" data-i="0" aria-label="查看芙莉蓮的資料"><span class="drc"><img src="images/chars/frieren.jpg" alt="芙莉蓮的動畫畫面" decoding="async" style="object-position:53% 40%;transform-origin:52% 40%;--z:1.15"></span></button>
+    <button class="dr" type="button" data-i="1" aria-label="查看欣梅爾的資料"><span class="drc"><img src="images/chars/himmel.jpg" alt="欣梅爾的動畫畫面" decoding="async" style="object-position:50% 36%;transform-origin:50% 36%;--z:1.2"></span></button>
+    <button class="dr" type="button" data-i="2" aria-label="查看琪琪的資料"><span class="drc"><img src="images/chars/kiki.jpg" alt="琪琪騎著掃帚，吉吉在背後" decoding="async" style="object-position:50% 40%;transform-origin:50% 40%;--z:1.35"></span></button>
+    <button class="dr" type="button" data-i="3" aria-label="查看巴斯光年的資料"><span class="drc"><img src="images/chars/buzz.jpg" alt="巴斯光年展翅飛行" decoding="async" style="object-position:51% 38%;transform-origin:51% 36%;--z:1.6"></span></button>
+    <button class="dr" type="button" data-i="4" aria-label="查看星矢的資料"><span class="drc"><img src="images/chars/seiya.jpg" alt="穿著射手座黃金聖衣拉弓的星矢" decoding="async" style="object-position:24% 46%;transform-origin:24% 46%;--z:1.25"></span></button>
+    <button class="dr" type="button" data-i="5" aria-label="查看千手柱間的資料"><span class="drc"><img src="images/chars/hashirama.jpg" alt="千手柱間結印" decoding="async" style="object-position:60% 40%;transform-origin:60% 40%;--z:1.15"></span></button>
+    <button class="dr" type="button" data-i="6" aria-label="查看歐爾麥特的資料"><span class="drc"><img src="images/chars/allmight.jpg" alt="歐爾麥特高舉手臂微笑" decoding="async" style="object-position:58% 40%;transform-origin:58% 40%;--z:1.0"></span></button>
+    <button class="dr" type="button" data-i="7" aria-label="查看月野兔的資料"><span class="drc"><img src="images/chars/sailormoon.jpg" alt="美少女戰士擺出招牌姿勢" decoding="async" style="object-position:52% 42%;transform-origin:52% 42%;--z:1.05"></span></button>
+    <button class="dr" type="button" data-i="8" aria-label="查看奇異博士的資料"><span class="drc"><img src="images/chars/strange.jpg" alt="奇異博士站在魔法圓環前" decoding="async" style="object-position:52% 30%;transform-origin:52% 30%;--z:1.0"></span></button>
+    <button class="dr" type="button" data-i="9" aria-label="查看春風DoReMi的資料"><span class="drc"><img src="images/chars/doremi.jpg" alt="小魔女DoReMi施展魔法" decoding="async" style="object-position:46% 46%;transform-origin:46% 46%;--z:1.0"></span></button>
   </div>
 </div></section>
 
@@ -542,7 +543,7 @@ footer a{color:#5fd0f3}
   <h2>總結：動漫成為選戰新語言</h2>
   <p class="lede">本專題收錄 14 人次：5 則候選人親口引用的台詞，9 人親自扮成動畫與漫畫角色（同一人既引用台詞又扮裝，兩類各算一次，實際涉及 10 位候選人）。按政黨計，民進黨 9 人次、國民黨 3 人次、民眾黨 2 人次，三個政黨都有人使用。</p>
   <p class="lede"><b>萬聖節是最大舞台。</b>9 位扮裝的候選人，全部集中在 10 月 26 日至 11 月 1 日之間；5 則台詞裡，也有 3 則出現在 10 月 31 日當天。</p>
-  <p class="lede"><b>日本作品佔多數。</b>14 人次中，11 人次來自日本作品，3 人次來自美國作品（巴斯光年、奇異博士）。《葬送的芙莉蓮》的欣梅爾出現最多，共 3 次。</p>
+  <p class="lede"><b>日本作品佔多數。</b>14 人次中，11 人次來自日本作品，3 人次來自美國作品（巴斯光年、奇異博士）。《葬送的芙莉蓮》是出現最多的作品，共 3 人次。</p>
   <p class="lede"><b>台詞多談「同伴」。</b>蘇巧慧談「一起旅行」，李四川談「最佳拍檔」，邱臣遠談「守護夥伴」，沈伯洋談「一起守護家園」，借角色說的都是團隊與守護。</p>
   <p class="lede">動漫梗讓選舉多了一點親切感，但 11 月 28 日投票時，決定票投給誰的，終究還是政見與執行力。</p>
 </div></section>
@@ -667,7 +668,7 @@ footer a{color:#5fd0f3}
   });
   // 角色相牆（飄動、碰撞）
   const stage = document.getElementById('drift');
-  const MULT = [1.1, .92, 1, .95, .86, 1.05, 1.15, .9, 1];
+  const MULT = [1.05, 1.1, .92, 1, .95, .86, 1.05, 1.15, .9, 1];
   const PAD = {l: 0, r: 0, t: 0, b: 0};
   const balls = [...stage.querySelectorAll('.dr')].map((el, i) => ({
     el, c: el.querySelector('.drc'), i, x: 0, y: 0, vx: 0, vy: 0, r: 40, hold: false, cd: 0, hs: 1,
@@ -785,7 +786,7 @@ footer a{color:#5fd0f3}
   document.getElementById('charModal').addEventListener('hidden.bs.modal', () => { modalOpen = false; balls.forEach(b => { b.hold = false; }); wallSync(); });
   sizeWall();
   // 角色資料彈窗
-  const CH = [{"n": "欣梅爾", "w": "《葬送的芙莉蓮》", "d": "帶領隊伍打倒魔王的人類勇者。故事開始時他已年老離世，長壽的精靈魔法使芙莉蓮，才回頭重走當年的旅途，重新認識「人類」。", "f": "himmel", "a": "欣梅爾的動畫畫面", "p": "50% 36%"}, {"n": "琪琪", "w": "《魔女宅急便》", "d": "十三歲的見習魔女。依傳統離家獨立生活一年，騎著掃帚、帶著黑貓吉吉，在海邊城鎮開起送貨的「宅急便」，途中一度失去飛行的魔法。", "f": "kiki", "a": "琪琪騎著掃帚，吉吉在背後", "p": "50% 40%"}, {"n": "巴斯光年", "w": "《玩具總動員》", "d": "太空騎警造型的玩具。起初他以為自己真的是太空英雄，後來和牛仔玩具胡迪從對手變成最佳拍檔。招牌台詞是「飛向宇宙、浩瀚無垠」。", "f": "buzz", "a": "巴斯光年展翅飛行", "p": "55% 30%"}, {"n": "星矢", "w": "《聖鬥士星矢》", "d": "原是天馬座的青銅聖鬥士，為了守護女神雅典娜而戰。他靠燃燒體內的「小宇宙」發揮超越極限的力量，是許多人的童年回憶。圖中是他後來穿上的射手座黃金聖衣。", "f": "seiya", "a": "穿著射手座黃金聖衣拉弓的星矢", "p": "0% 50%"}, {"n": "千手柱間", "w": "《火影忍者》", "d": "初代火影，木葉隱村的創立者，以強大的木遁忍術聞名。他的理想，是讓各個忍者家族不再互相殺戮、一起守護村子。", "f": "hashirama", "a": "千手柱間結印", "p": "64% 40%"}, {"n": "歐爾麥特", "w": "《我的英雄學院》", "d": "被稱為「和平象徵」的第一名英雄。他把代代相傳的「One For All」力量，傳給了主角綠谷出久。", "f": "allmight", "a": "歐爾麥特高舉手臂微笑", "p": "64% 38%"}, {"n": "月野兔", "w": "《美少女戰士》", "d": "月野兔是故事的主角，本是平凡的國中生，變身後成為穿水手服、替月亮懲罰壞人的「美少女戰士」，是經典魔法少女的代表。", "f": "sailormoon", "a": "美少女戰士擺出招牌姿勢", "p": "54% 36%"}, {"n": "奇異博士", "w": "《奇異博士》", "d": "原是天才外科醫生，車禍傷了雙手後學習魔法，成為守護地球、對抗魔法威脅的「至尊法師」，紅色披風是他的標誌。", "f": "strange", "a": "奇異博士站在魔法圓環前", "p": "50% 22%"}, {"n": "春風DoReMi", "w": "《小魔女DoReMi》", "d": "春風DoReMi 是故事的主角，一個普通的小學生，因為機緣成為「魔女見習生」，和朋友們一邊上學，一邊學習魔法。", "f": "doremi", "a": "小魔女DoReMi施展魔法", "p": "37% 40%"}];
+  const CH = [{"n": "芙莉蓮", "w": "《葬送的芙莉蓮》", "d": "故事的主角，長壽的精靈魔法使。她曾和勇者欣梅爾一行人打倒魔王；多年後欣梅爾離世，她重新踏上旅途，想要更了解人類。", "f": "frieren", "a": "芙莉蓮的動畫畫面", "p": "53% 40%"}, {"n": "欣梅爾", "w": "《葬送的芙莉蓮》", "d": "帶領隊伍打倒魔王的人類勇者。故事開始時他已年老離世，長壽的精靈魔法使芙莉蓮，才回頭重走當年的旅途，重新認識「人類」。", "f": "himmel", "a": "欣梅爾的動畫畫面", "p": "50% 36%"}, {"n": "琪琪", "w": "《魔女宅急便》", "d": "十三歲的見習魔女。依傳統離家獨立生活一年，騎著掃帚、帶著黑貓吉吉，在海邊城鎮開起送貨的「宅急便」，途中一度失去飛行的魔法。", "f": "kiki", "a": "琪琪騎著掃帚，吉吉在背後", "p": "50% 40%"}, {"n": "巴斯光年", "w": "《玩具總動員》", "d": "太空騎警造型的玩具。起初他以為自己真的是太空英雄，後來和牛仔玩具胡迪從對手變成最佳拍檔。招牌台詞是「飛向宇宙、浩瀚無垠」。", "f": "buzz", "a": "巴斯光年展翅飛行", "p": "55% 30%"}, {"n": "星矢", "w": "《聖鬥士星矢》", "d": "原是天馬座的青銅聖鬥士，為了守護女神雅典娜而戰。他靠燃燒體內的「小宇宙」發揮超越極限的力量，是許多人的童年回憶。圖中是他後來穿上的射手座黃金聖衣。", "f": "seiya", "a": "穿著射手座黃金聖衣拉弓的星矢", "p": "0% 50%"}, {"n": "千手柱間", "w": "《火影忍者》", "d": "初代火影，木葉隱村的創立者，以強大的木遁忍術聞名。他的理想，是讓各個忍者家族不再互相殺戮、一起守護村子。", "f": "hashirama", "a": "千手柱間結印", "p": "64% 40%"}, {"n": "歐爾麥特", "w": "《我的英雄學院》", "d": "被稱為「和平象徵」的第一名英雄。他把代代相傳的「One For All」力量，傳給了主角綠谷出久。", "f": "allmight", "a": "歐爾麥特高舉手臂微笑", "p": "64% 38%"}, {"n": "月野兔", "w": "《美少女戰士》", "d": "月野兔是故事的主角，本是平凡的國中生，變身後成為穿水手服、替月亮懲罰壞人的「美少女戰士」，是經典魔法少女的代表。", "f": "sailormoon", "a": "美少女戰士擺出招牌姿勢", "p": "54% 36%"}, {"n": "奇異博士", "w": "《奇異博士》", "d": "原是天才外科醫生，車禍傷了雙手後學習魔法，成為守護地球、對抗魔法威脅的「至尊法師」，紅色披風是他的標誌。", "f": "strange", "a": "奇異博士站在魔法圓環前", "p": "50% 22%"}, {"n": "春風DoReMi", "w": "《小魔女DoReMi》", "d": "春風DoReMi 是故事的主角，一個普通的小學生，因為機緣成為「魔女見習生」，和朋友們一邊上學，一邊學習魔法。", "f": "doremi", "a": "小魔女DoReMi施展魔法", "p": "37% 40%"}];
   const cmEl = document.getElementById('charModal'), cm = new bootstrap.Modal(cmEl);
   let cmI = 0;
   function showChar(i){
