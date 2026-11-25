@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>台詞與扮裝：2026選戰遇上動漫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Dela+Gothic+One&family=Potta+One&family=Reggae+One&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* 基本設定 */
+:root{color-scheme:light dark;--paper:light-dark(#fbfaf6,#151515);--ink:light-dark(#111,#f1efe8);--tone:light-dark(#d8d4c8,#3a3a3a);--soft:light-dark(#efece3,#1f1f1f);--acc:#0096c7;--accSoft:light-dark(#e3f4fa,#0c2d3a);--mut:light-dark(#555,#aaa)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 "Noto Sans TC",system-ui,sans-serif;overflow-x:clip}
+a{color:var(--acc)}
+h1,h2,h3{font-weight:900;line-height:1.1;text-wrap:balance;margin:0 0 .5em}
+h2{font-size:clamp(30px,4.4vw,48px)}h3{font-size:20px}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+.wrap{max-width:1100px;margin:0 auto}
+main .band{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+main .band>.wrap{width:100%}
+.lede.wide{max-width:none}
+.lede{max-width:66ch;font-size:18px;text-align:justify;text-justify:inter-character;line-break:strict;overflow-wrap:break-word}
+.note{font-size:14px;color:var(--mut)}
+/* 目錄 */
+nav{position:sticky;top:0;z-index:50;background:var(--paper)}
+nav .wrap{display:flex;align-items:center;gap:6px;overflow-x:auto;padding:12px max(5vw,16px)}
+nav a{flex:none;padding:6px 12px;color:color-mix(in srgb,var(--ink) 50%,transparent);text-decoration:none;font-weight:700;font-size:15px;transition:color .3s,transform .4s cubic-bezier(.3,1.7,.5,1)}
+nav a:hover{color:var(--ink)}
+nav a.on{color:var(--ink);transform:translateY(2px) skewX(-8deg)}
+nav .wrap{position:relative}
+#mark{position:absolute;top:0;left:0;width:17px;height:17px;background:var(--ink);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);pointer-events:none;opacity:0;
+ transform:translateX(var(--x,0px)) rotate(var(--r,0deg));transition:transform .55s cubic-bezier(.3,1.7,.5,1),opacity .3s}
+#mark.show{opacity:1}
+@media (prefers-reduced-motion:reduce){#mark,nav a{transition:none}}
+nav a:first-of-type{margin-left:auto}nav a:last-of-type{margin-right:auto}
+#bar{position:absolute;left:0;bottom:0;height:4px;background:var(--acc);width:0}
+/* 開場橫幅 */
+.hbanner{inset:-25% 0;display:grid;place-items:center;pointer-events:none}
+.tilt{transform:rotate(-7deg);width:150%;display:grid;gap:8px}
+.nrow{overflow:hidden;border-block:3px solid var(--ink)}
+.mq{display:flex;width:max-content;animation:mq var(--dur,90s) linear infinite}
+.rev .mq{animation-direction:reverse}
+.mqi{display:flex;flex:none}
+.mqi span{flex:none;white-space:nowrap;font-weight:900;font-size:calc(var(--fs,70px) * var(--k,1) * max(1, 100vw / 1440px));line-height:1.2;padding:.08em 0;
+ -webkit-text-stroke:.055em var(--paper);paint-order:stroke fill;text-shadow:.05em .05em 0 color-mix(in srgb,var(--ink) 45%,transparent)}
+.mqi span::after{content:"";display:inline-block;width:.22em;height:.22em;background:var(--ink);transform:rotate(45deg);margin:0 .6em;vertical-align:.1em;-webkit-text-stroke:0}
+.n1{color:var(--ink);background:radial-gradient(circle,color-mix(in srgb,var(--ink) 32%,transparent) 1.7px,transparent 2.2px) 0 0/10px 10px,var(--paper)}
+.n2{color:var(--ink);background:repeating-linear-gradient(135deg,transparent 0 6px,color-mix(in srgb,var(--ink) 38%,transparent) 6px 7.5px),var(--soft)}
+.n3{color:var(--paper);background:radial-gradient(circle,color-mix(in srgb,var(--paper) 22%,transparent) 1.7px,transparent 2.2px) 0 0/10px 10px,var(--ink)}
+.n3 .mqi span{-webkit-text-stroke:.055em var(--ink);text-shadow:.05em .05em 0 color-mix(in srgb,var(--paper) 40%,transparent)}
+.n3 .mqi span::after{background:var(--paper)}
+.n1 .mqi span{font-family:"Dela Gothic One","Noto Sans TC",sans-serif;font-weight:400}
+.n2 .mqi span{font-family:"Potta One","Noto Sans TC",sans-serif;font-weight:400}
+.n3 .mqi span{font-family:"Reggae One","Noto Sans TC",sans-serif;font-weight:400}
+.bigBubble h1{font-family:"Dela Gothic One","Noto Sans TC",sans-serif;font-weight:400;letter-spacing:.04em;line-height:1.25}
+.n1 .mqi span:nth-child(4n+2),.n2 .mqi span:nth-child(4n+3){color:var(--paper);-webkit-text-stroke:.07em var(--ink);text-shadow:.05em .05em 0 var(--ink)}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+ background:repeating-conic-gradient(from 0deg at 50% 50%,transparent 0 2deg,color-mix(in srgb,var(--ink) 16%,transparent) 2deg 2.7deg);
+ -webkit-mask:radial-gradient(circle at 50% 50%,transparent 24%,#000 78%);mask:radial-gradient(circle at 50% 50%,transparent 24%,#000 78%)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (max-width:760px){.tilt{--k:.62}}
+@media (prefers-reduced-motion:reduce){.mq{animation:none}}
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr);place-items:center;overflow:hidden;border-bottom:3px solid var(--ink);
+ background:radial-gradient(circle,var(--tone) 1.2px,transparent 1.6px) 0 0/9px 9px fixed,var(--paper)}
+.layer{position:absolute;will-change:transform}
+.heroText{position:relative;z-index:2;width:min(100%,900px);padding:0 16px;text-align:center}
+.bigBubble{display:inline-block;background:var(--paper);border:4px solid var(--ink);border-radius:50%/42%;padding:clamp(28px,5vw,56px) clamp(20px,6vw,70px);position:relative;box-shadow:10px 10px 0 var(--ink)}
+.bigBubble::after{content:"";position:absolute;z-index:-1;left:41%;top:100%;margin-top:-22px;width:46px;height:70px;background:var(--ink);clip-path:polygon(0 0,100% 0,34% 100%)}
+.bigBubble h1{font-size:clamp(24px,5vw,56px);margin:0}
+.kick{display:block;font-size:clamp(15px,2vw,19px);font-weight:700;margin-bottom:10px;color:var(--ink)}
+.cue{position:absolute;bottom:22px;background:var(--paper);border:3px solid var(--ink);padding:2px 12px;left:50%;transform:translateX(-50%);font-size:14px;font-weight:700;z-index:2;animation:bob 1.6s infinite}
+@keyframes bob{50%{transform:translate(-50%,6px)}}
+/* 前言、時間軸 */
+.facts{margin-top:14px}
+.fact{border:3px solid var(--ink);padding:18px;background:var(--paper);box-shadow:6px 6px 0 var(--ink)}
+.fact b{display:block;font-size:clamp(28px,4vw,40px);font-weight:900;line-height:1.1;color:var(--acc)}
+.tl{position:relative;display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 20px;margin-top:30px}
+.tl svg{position:absolute;left:0;top:0;width:72px;height:100%}
+.tl path{fill:none;stroke-width:5;stroke-linecap:round}
+#tlBase{stroke:var(--tone)}#tlLine{stroke:var(--acc);stroke-dasharray:1;stroke-dashoffset:1}
+.node{grid-column:2;padding:18px 0 34px;font-size:clamp(17px,1.7vw,21px);opacity:.28;transition:opacity .5s}
+.node.on{opacity:1}
+.node time{font-weight:900;font-size:clamp(23px,2.5vw,32px);line-height:1.3;display:block}
+.node.vote time{color:var(--acc)}
+#timeline{display:block;min-height:0;padding:0}
+.tlpin{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+.tlpin .wrap{width:100%}
+#timeline.pinned .tlpin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:72px;padding-bottom:20px}
+#timeline.pinned h2{margin-bottom:.2em}
+#timeline.pinned .tl{margin-top:10px}
+#timeline.pinned .node{padding:6px 0 12px;line-height:1.5}
+.tdot{position:absolute;width:16px;height:16px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--soft);transform:translate(-50%,-50%) scale(0);transition:transform .5s cubic-bezier(.3,1.9,.5,1);z-index:2}
+.tdot.on{transform:translate(-50%,-50%) scale(1)}
+.tdot::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--acc);opacity:0}
+.tdot.on::after{animation:ping .9s ease-out}
+@keyframes ping{from{opacity:.9;transform:scale(1)}to{opacity:0;transform:scale(3.2)}}
+@media (prefers-reduced-motion:reduce){.tdot,.node{transition:none}.tdot.on::after{animation:none}}
+/* 第一話：台詞卡 */
+.stack{margin-top:34px;display:grid;gap:34px}
+.panel{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center;
+ border:3px solid var(--ink);background:var(--paper);box-shadow:8px 8px 0 var(--ink);padding:clamp(26px,3.4vw,52px);min-height:min(60vh,500px)}
+.panel:nth-child(even){background:var(--soft)}
+.pinfo{display:flex;flex-direction:column;gap:18px}
+.pid{display:flex;align-items:center;gap:clamp(16px,2vw,28px)}
+.pidt{display:flex;flex-direction:column;gap:10px;min-width:0}
+.face{flex:none;position:relative;width:clamp(104px,12vw,170px);aspect-ratio:1/1;overflow:hidden;border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);background:var(--soft);
+ opacity:0;transform:scale(.55) rotate(-10deg);transition:transform .65s cubic-bezier(.3,1.6,.5,1) .15s,opacity .3s .15s}
+.face img{position:absolute;display:block;max-width:none;height:auto}
+.panel.in .face{opacity:1;transform:rotate(-3deg)}
+.panel:nth-child(even).in .face{transform:rotate(3deg)}
+@media (prefers-reduced-motion:reduce){.face{opacity:1;transform:rotate(-3deg);transition:none}}
+@media (max-width:520px){.pid{flex-direction:column;align-items:flex-start}}
+.pinfo p,.hcard p{margin:0;text-align:justify;text-justify:inter-character;line-break:strict;overflow-wrap:break-word}
+@media (min-width:861px) and (min-height:640px){.panel{position:sticky;top:calc(84px + var(--i) * 14px)}}
+@media (max-width:860px){.panel{grid-template-columns:minmax(0,1fr);min-height:0}}
+.panel:nth-child(1){width:94%;margin-right:auto;transform:rotate(-.9deg)}
+.panel:nth-child(2){width:92%;margin-left:auto;transform:rotate(1.1deg);grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+.panel:nth-child(3){width:96%;margin-left:3%;transform:rotate(-1.3deg)}
+.panel:nth-child(4){width:90%;margin-left:auto;transform:rotate(.9deg);grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+.panel:nth-child(5){width:97%;margin-right:auto;transform:rotate(-.6deg)}
+.panel:nth-child(2) .pq,.panel:nth-child(4) .pq{order:2}
+.panel:nth-child(even) .bubble::after{left:auto;right:40%;clip-path:polygon(0 0,100% 0,66% 100%)}
+.panel:nth-child(1) .pq{transform:rotate(-1.6deg)}
+.panel:nth-child(2) .pq{transform:rotate(1.8deg)}
+.panel:nth-child(3) .pq{transform:rotate(-.8deg)}
+.panel:nth-child(4) .pq{transform:rotate(2deg)}
+.panel:nth-child(5) .pq{transform:rotate(-1.2deg)}
+.panel:nth-child(1).in .face{transform:rotate(-5deg)}
+.panel:nth-child(2).in .face{transform:rotate(4deg)}
+.panel:nth-child(3).in .face{transform:rotate(-2deg)}
+.panel:nth-child(4).in .face{transform:rotate(6deg)}
+.panel:nth-child(5).in .face{transform:rotate(-4deg)}
+.panel:nth-child(2) .pid,.panel:nth-child(4) .pid{flex-direction:column;align-items:flex-end;text-align:right}
+.panel:nth-child(2) .pidt,.panel:nth-child(4) .pidt{align-items:flex-end}
+.panel:nth-child(2) .meta,.panel:nth-child(4) .meta{justify-content:flex-end}
+@media (max-width:860px){
+ .panel:nth-child(n){width:100%;margin:0;grid-template-columns:minmax(0,1fr);transform:rotate(0)}
+ .panel:nth-child(n) .pq{order:0;transform:none}
+ .panel:nth-child(n) .pid{flex-direction:row;text-align:left}
+ .panel:nth-child(n) .meta{justify-content:flex-start}
+ .panel:nth-child(n) }
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-size:14px}
+.chip{border:2px solid var(--ink);padding:1px 9px;border-radius:99px;font-weight:700;white-space:nowrap}
+.chip.work{background:var(--accSoft)}
+.who small{display:inline-block;text-wrap:balance}
+.who{font-weight:900;font-size:clamp(22px,2.2vw,28px);line-height:1.2}
+.bubble{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:46%/42%;padding:clamp(34px,4.4vw,64px) clamp(28px,4vw,60px);
+ font:400 clamp(24px,2.9vw,40px)/1.45 "Mochiy Pop One","Noto Sans TC",sans-serif;text-wrap:balance;text-align:center;box-shadow:8px 8px 0 var(--ink);
+ opacity:0;transform:scale(.55) rotate(-4deg);transition:transform .5s cubic-bezier(.3,1.6,.5,1),opacity .3s}
+.bubble::after{content:"";position:absolute;z-index:-1;left:40%;top:100%;margin-top:-14px;width:34px;height:50px;background:var(--ink);clip-path:polygon(0 0,100% 0,34% 100%)}
+.bubble.para{font-weight:400;font-size:17px}
+.bubble .by{display:block;margin-top:.8em;font-size:.48em;line-height:1.5;letter-spacing:.02em;opacity:.75}
+.bubble.long .by{font-size:.85em;margin-top:.7em}
+.in .bubble{opacity:1;transform:none}
+/* 錄音按鈕 */
+.voice{margin-top:34px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.vbtn{position:relative;display:inline-flex;align-items:center;gap:12px;min-height:58px;padding:6px 22px 6px 6px;overflow:hidden;isolation:isolate;
+ font:400 18px/1.2 "Mochiy Pop One","Noto Sans TC",sans-serif;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:999px;
+ box-shadow:6px 6px 0 var(--ink);cursor:pointer;transition:transform .18s cubic-bezier(.3,1.6,.5,1),box-shadow .18s}
+.vbtn>*{position:relative;z-index:1}
+.vbtn>.vfill{position:absolute;z-index:0;inset:0 auto 0 0;width:0;overflow:hidden;background:color-mix(in srgb,var(--acc) 38%,transparent)}
+.vfill::after{content:"";position:absolute;top:0;bottom:0;right:0;width:3px;background:var(--acc)}
+.vbtn:hover{transform:translate(-2px,-3px) rotate(-1deg);box-shadow:9px 9px 0 var(--ink)}
+.vbtn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--ink)}
+.vbtn:focus-visible{outline:3px solid var(--acc);outline-offset:5px}
+.vdisc{flex:none;width:46px;height:46px;border-radius:50%;background:var(--acc);border:3px solid var(--ink);display:grid;place-items:center;transition:transform .25s cubic-bezier(.3,1.7,.5,1)}
+.vbtn:hover .vdisc{transform:scale(1.1) rotate(-8deg)}
+.vico{width:0;height:0;border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.vbtn[aria-pressed=true] .vico{width:14px;height:17px;border:0;margin:0;background:linear-gradient(90deg,#fff 0 36%,transparent 36% 64%,#fff 64%)}
+.vwave{display:flex;align-items:center;gap:3px;height:26px}
+.vwave i{display:block;width:4px;height:100%;border-radius:2px;background:var(--ink);transform:scaleY(.3)}
+.vwave i:nth-child(1){transform:scaleY(.35)}.vwave i:nth-child(2){transform:scaleY(.65)}.vwave i:nth-child(3){transform:scaleY(.95)}.vwave i:nth-child(4){transform:scaleY(.55)}.vwave i:nth-child(5){transform:scaleY(.85)}.vwave i:nth-child(6){transform:scaleY(.5)}.vwave i:nth-child(7){transform:scaleY(.3)}
+.vbtn[aria-pressed=true] .vwave i{animation:vb .7s ease-in-out infinite}
+.vwave i:nth-child(2){animation-delay:.1s!important}.vwave i:nth-child(3){animation-delay:.22s!important}.vwave i:nth-child(4){animation-delay:.05s!important}.vwave i:nth-child(5){animation-delay:.3s!important}.vwave i:nth-child(6){animation-delay:.15s!important}.vwave i:nth-child(7){animation-delay:.27s!important}
+@keyframes vb{0%,100%{transform:scaleY(.22)}50%{transform:scaleY(1)}}
+.vtime{font:700 14px/1 "Noto Sans TC",sans-serif;font-variant-numeric:tabular-nums;min-width:2.6em;text-align:right;opacity:.65}
+@media (prefers-reduced-motion:reduce){.vbtn,.vdisc{transition:none}.vbtn[aria-pressed=true] .vwave i{animation:none}}
+.bubble.long{font:400 clamp(16px,1.5vw,20px)/1.75 "Mochiy Pop One","Noto Sans TC",sans-serif;text-wrap:balance;padding:clamp(40px,5vw,72px) clamp(30px,4.4vw,64px)}
+.toggle{margin-top:26px;font:700 16px "Noto Sans TC",sans-serif;padding:12px 20px;min-height:44px;border:3px solid var(--ink);background:var(--accSoft);color:var(--ink);box-shadow:5px 5px 0 var(--ink);cursor:pointer}
+.toggle:focus-visible,nav a:focus-visible,.hbtn:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.inter{background:var(--ink);color:var(--paper);text-align:center}
+/* 欣梅爾相片區 */
+.interGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) minmax(0,1fr);gap:clamp(22px,3.4vw,56px);align-items:center}
+.ph{margin:0;position:relative;opacity:0;transition:transform .8s cubic-bezier(.3,1.4,.5,1),opacity .5s}
+.ph-l{transform:translateX(-70px) rotate(-9deg)}.ph-r{transform:translateX(70px) rotate(9deg)}
+.ph-l.in{opacity:1;transform:rotate(-3deg)}.ph-r.in{opacity:1;transform:rotate(3deg)}
+.ph img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border:5px solid var(--paper);box-shadow:10px 10px 0 var(--acc)}
+.ph-l img{object-position:56% 50%}
+.ph figcaption{position:absolute;left:-10px;bottom:-16px;background:var(--paper);color:var(--ink);border:3px solid var(--ink);padding:5px 14px;font:400 clamp(14px,1.4vw,18px)/1.3 "Mochiy Pop One","Noto Sans TC",sans-serif}
+.ph-r figcaption{left:auto;right:-10px}
+@media (max-width:860px){.inter .num{font-size:clamp(52px,15vw,96px)}.interGrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.interMid{grid-column:1/-1;order:-1}.ph figcaption{left:-4px;bottom:-12px;padding:4px 10px}.ph-r figcaption{right:-4px}}
+@media (prefers-reduced-motion:reduce){.ph{opacity:1;transition:none}.ph-l{transform:rotate(-3deg)}.ph-r{transform:rotate(3deg)}}
+.inter .num{font:400 clamp(38px,5.2vw,80px)/1.15 "Dela Gothic One","Noto Sans TC",sans-serif;letter-spacing:.03em;white-space:nowrap;color:var(--acc);
+ opacity:0;transform:scale(.55) rotate(-4deg);transition:transform .7s cubic-bezier(.3,1.6,.5,1),opacity .4s}
+.inter .num.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.inter .num{opacity:1;transform:none;transition:none}}
+/* 第二話：橫向捲動卡片 */
+#hs{position:relative}
+.pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:64px 0 14px}
+.pin h2,.pin .lede{padding:0 max(5vw,16px)}
+.track{display:flex;gap:26px;padding:20px max(5vw,16px) 30px;will-change:transform}
+.hcard{flex:0 0 min(78vw,410px);border:3px solid var(--ink);background:var(--paper);box-shadow:7px 7px 0 var(--ink);padding:16px 18px;display:flex;flex-direction:column;gap:9px;font-size:15.5px;line-height:1.6}
+.hhead{display:flex;align-items:center;gap:14px}
+.hid{display:flex;flex-direction:column;gap:6px;min-width:0}
+.hcard .meta{flex-direction:column;align-items:flex-start;gap:5px}
+.hcard .chip{max-width:100%;font-size:13px;line-height:1.45;padding:1px 10px;white-space:nowrap;border-radius:99px}
+.hcard .meta .chip:not(.work){align-self:flex-start;font-size:11.5px;font-weight:700;padding:0 8px;color:var(--mut);border:1.5px solid color-mix(in srgb,var(--ink) 40%,transparent)}
+.hcard .who small{display:block;margin-top:3px;font-size:13px;font-weight:400;line-height:1.4;color:var(--mut);white-space:nowrap}
+@media (max-width:760px){.hcard .chip,.hcard .who small{white-space:normal}.hcard .chip{border-radius:14px;text-wrap:balance}}
+.hface{--d:clamp(104px,17vh,150px);flex:none;position:relative;width:var(--d);aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);background:var(--soft)}
+.hface img{position:absolute;display:block;max-width:none;height:auto}
+.hnav{display:none;gap:10px;padding:0 max(5vw,16px)}
+.hbtn{min-width:44px;min-height:44px;border:3px solid var(--ink);background:var(--paper);color:var(--ink);font-size:20px;font-weight:900;cursor:pointer}
+@media (min-width:761px) and (max-height:740px){
+ .pin{padding:58px 0 8px}
+ .pin h2{font-size:28px;margin-bottom:.15em}
+ .pin .lede{font-size:14.5px;line-height:1.5;margin:0 0 2px}
+ .track{padding-top:10px;padding-bottom:16px}
+ .hface{--d:clamp(80px,14vh,104px)}
+ .hid .who{font-size:17px}
+ .hcard{padding:12px 16px;gap:7px;font-size:14.5px;line-height:1.55}
+ .hcard .who{font-size:19px}
+}
+@media (max-width:760px),(prefers-reduced-motion:reduce){
+ .pin{position:static;height:auto;padding:40px 0}
+ .track{overflow-x:auto;scroll-snap-type:x mandatory;transform:none!important}
+ .hcard{scroll-snap-align:start}.hnav{display:flex}
+}
+.bars{display:grid;gap:22px;margin-top:26px}
+/* 角色相牆 */
+#chars{background:var(--soft)}
+.drift{position:relative;overflow:hidden;width:100vw;margin:14px 0 0 calc(50% - 50vw);height:clamp(520px,78vh,720px);touch-action:pan-y}
+.dr{position:absolute;left:0;top:0;padding:0;border:0;background:none;border-radius:50%;cursor:pointer;will-change:transform}
+.drc{display:block;position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--soft);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 16%,transparent);transition:scale .22s ease-out}
+.drc img{display:block;width:100%;height:100%;object-fit:cover;scale:var(--z,1)}
+.dr:hover,.dr:focus-visible{z-index:5;outline:none}
+.dr:hover .drc,.dr:focus-visible .drc{scale:1.07}
+.dr:focus-visible .drc{outline:3px solid var(--acc);outline-offset:5px}
+@media (min-width:861px) and (min-height:620px){
+ #chars{display:block;min-height:0;height:185vh;padding:0 max(5vw,16px)}
+ #chars>.wrap{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:74px 0 30px}
+ #chars h2{font-size:clamp(26px,3vw,40px);margin:0 0 .2em}
+ #chars .lede{margin:0;font-size:16px}
+ #chars .drift{position:absolute;left:calc(50% - 50vw);width:100vw;top:62px;bottom:0;height:auto;margin:0}
+ #chars h2,#chars .lede{position:relative;z-index:2;width:fit-content;max-width:100%}
+}
+/* 角色資料彈窗 */
+#charModal .modal-content{position:relative;border:4px solid var(--ink);border-radius:0;background:var(--paper);color:var(--ink);box-shadow:10px 10px 0 var(--acc)}
+#charModal.modal.fade .modal-dialog{transform:scale(.8) rotate(-2deg);transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+#charModal.modal.show .modal-dialog{transform:none}
+.cm-x{position:absolute;top:-4px;right:-4px;z-index:3;width:44px;height:44px;border:4px solid var(--ink);background:var(--ink);color:var(--paper);font:400 28px/1 "Mochiy Pop One",sans-serif;cursor:pointer}
+.cm-x:hover{background:var(--acc)}
+.cm-body{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.cm-img{background:var(--ink);display:grid;place-items:center;border-right:4px solid var(--ink)}
+.cm-img img{display:block;width:100%;height:100%;max-height:70vh;object-fit:cover}
+.cm-txt{padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:12px}
+.cm-txt h3{margin:0;font:400 clamp(28px,3.4vw,42px)/1.15 "Dela Gothic One","Noto Sans TC",sans-serif}
+.cm-txt .chip{align-self:flex-start;background:var(--accSoft)}
+.cm-txt p{margin:0;font-size:16px;line-height:1.8}
+.cm-nav{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:6px;font-size:14px;font-weight:700}
+.cm-b{min-height:42px;padding:6px 14px;border:3px solid var(--ink);background:var(--paper);color:var(--ink);font:400 14px/1.2 "Mochiy Pop One","Noto Sans TC",sans-serif;box-shadow:4px 4px 0 var(--ink);cursor:pointer}
+.cm-b:hover{background:var(--acc);color:#fff}.cm-b:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+@media (max-width:760px){.cm-body{grid-template-columns:1fr}.cm-img{border-right:0;border-bottom:4px solid var(--ink)}.cm-img img{max-height:34vh}}
+@media (prefers-reduced-motion:reduce){#charModal.modal.fade .modal-dialog{transform:none;transition:none}}
+/* AI 使用聲明 */
+footer{min-height:100vh;background:var(--ink);color:var(--paper);display:flex;flex-direction:column;justify-content:center}
+footer a{color:#5fd0f3}
+.small{font-size:13px;opacity:.75;margin-top:40px}
+@media (prefers-reduced-motion:reduce){.bubble{opacity:1;transform:none;transition:none}.cue{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- 開場橫幅 -->
+<header class="hero" id="top">
+  <div class="layer hbanner" data-speed="0.12" aria-hidden="true"><div class="tilt">
+  <div class="nrow n1" style="--fs:92px;--dur:107s"><div class="mq"><div class="mqi"><span>美國隊長</span><span>沙加</span><span>雷神索爾</span><span>艾澤</span><span>瞬</span></div><div class="mqi" aria-hidden="true"><span>美國隊長</span><span>沙加</span><span>雷神索爾</span><span>艾澤</span><span>瞬</span></div></div></div>
+      <div class="nrow n2 rev" style="--fs:60px;--dur:92s"><div class="mq"><div class="mqi"><span>爆豪勝己</span><span>水野亞美</span><span>自來也</span><span>峰田實</span><span>阿烏拉</span><span>宇智波斑</span></div><div class="mqi" aria-hidden="true"><span>爆豪勝己</span><span>水野亞美</span><span>自來也</span><span>峰田實</span><span>阿烏拉</span><span>宇智波斑</span></div></div></div>
+      <div class="nrow n3" style="--fs:78px;--dur:95s"><div class="mq"><div class="mqi"><span>浩克</span><span>洛基</span><span>出久</span><span>天天</span><span>地場衛</span><span>緋紅女巫</span></div><div class="mqi" aria-hidden="true"><span>浩克</span><span>洛基</span><span>出久</span><span>天天</span><span>地場衛</span><span>緋紅女巫</span></div></div></div>
+      <div class="nrow n1 rev" style="--fs:52px;--dur:111s"><div class="mq"><div class="mqi"><span>歐索諾</span><span>牧羊女</span><span>欣梅爾</span><span>八百萬百</span><span>火野麗</span><span>蟻人</span><span>邁特凱</span><span>一輝</span></div><div class="mqi" aria-hidden="true"><span>歐索諾</span><span>牧羊女</span><span>欣梅爾</span><span>八百萬百</span><span>火野麗</span><span>蟻人</span><span>邁特凱</span><span>一輝</span></div></div></div>
+      <div class="nrow n2" style="--fs:70px;--dur:100s"><div class="mq"><div class="mqi"><span>露娜</span><span>星爵</span><span>日向寧次</span><span>波風水門</span><span>李洛克</span><span>吉吉</span></div><div class="mqi" aria-hidden="true"><span>露娜</span><span>星爵</span><span>日向寧次</span><span>波風水門</span><span>李洛克</span><span>吉吉</span></div></div></div>
+      <div class="nrow n3 rev" style="--fs:86px;--dur:98s"><div class="mq"><div class="mqi"><span>胡迪</span><span>宇智波鼬</span><span>薩諾斯</span><span>轟焦凍</span><span>費倫</span></div><div class="mqi" aria-hidden="true"><span>胡迪</span><span>宇智波鼬</span><span>薩諾斯</span><span>轟焦凍</span><span>費倫</span></div></div></div>
+      <div class="nrow n1" style="--fs:56px;--dur:74s"><div class="mq"><div class="mqi"><span>海塔</span><span>大蛇丸</span><span>奇異博士</span><span>三眼怪</span><span>愛野美奈子</span><span>巴斯光年</span><span>傑西</span></div><div class="mqi" aria-hidden="true"><span>海塔</span><span>大蛇丸</span><span>奇異博士</span><span>三眼怪</span><span>愛野美奈子</span><span>巴斯光年</span><span>傑西</span></div></div></div>
+      <div class="nrow n2 rev" style="--fs:74px;--dur:78s"><div class="mq"><div class="mqi"><span>火腿</span><span>木野真琴</span><span>紫龍</span><span>飯田天哉</span><span>相澤消太</span><span>芙莉蓮</span></div><div class="mqi" aria-hidden="true"><span>火腿</span><span>木野真琴</span><span>紫龍</span><span>飯田天哉</span><span>相澤消太</span><span>芙莉蓮</span></div></div></div>
+      <div class="nrow n3" style="--fs:64px;--dur:71s"><div class="mq"><div class="mqi"><span>千手柱間</span><span>天王遙</span><span>我愛羅</span><span>蜘蛛人</span><span>歐爾麥特</span><span>月野兔</span></div><div class="mqi" aria-hidden="true"><span>千手柱間</span><span>天王遙</span><span>我愛羅</span><span>蜘蛛人</span><span>歐爾麥特</span><span>月野兔</span></div></div></div>
+      <div class="nrow n1 rev" style="--fs:96px;--dur:105s"><div class="mq"><div class="mqi"><span>麗日御茶子</span><span>蘭克</span><span>鷹眼</span><span>冰河</span><span>雅典娜</span></div><div class="mqi" aria-hidden="true"><span>麗日御茶子</span><span>蘭克</span><span>鷹眼</span><span>冰河</span><span>雅典娜</span></div></div></div>
+      <div class="nrow n2" style="--fs:58px;--dur:75s"><div class="mq"><div class="mqi"><span>小櫻</span><span>安迪</span><span>奈良鹿丸</span><span>撒加</span><span>星矢</span><span>抱抱龍</span><span>米羅</span><span>鋼鐵人</span></div><div class="mqi" aria-hidden="true"><span>小櫻</span><span>安迪</span><span>奈良鹿丸</span><span>撒加</span><span>星矢</span><span>抱抱龍</span><span>米羅</span><span>鋼鐵人</span></div></div></div>
+      <div class="nrow n3 rev" style="--fs:80px;--dur:73s"><div class="mq"><div class="mqi"><span>日向雛田</span><span>鳴人</span><span>小小兔</span><span>彈簧狗</span><span>DoReMi</span></div><div class="mqi" aria-hidden="true"><span>日向雛田</span><span>鳴人</span><span>小小兔</span><span>彈簧狗</span><span>DoReMi</span></div></div></div>
+      <div class="nrow n1" style="--fs:68px;--dur:96s"><div class="mq"><div class="mqi"><span>綱手</span><span>修塔爾克</span><span>九尾</span><span>死柄木弔</span><span>佐助</span><span>海王滿</span><span>熊抱哥</span></div><div class="mqi" aria-hidden="true"><span>綱手</span><span>修塔爾克</span><span>九尾</span><span>死柄木弔</span><span>佐助</span><span>海王滿</span><span>熊抱哥</span></div></div></div>
+  </div></div>
+  <div class="heroText">
+    <div class="bigBubble"><span class="kick">2026 九合一選舉特輯</span><h1>台詞與扮裝<br>當選戰遇上動漫</h1></div>
+  </div>
+  <div class="cue">往下捲動 ↓</div>
+</header>
+
+<!-- 目錄 -->
+<nav class="sticky-top" aria-label="章節"><div class="wrap"><i id="mark" aria-hidden="true"></i>
+  <a href="#intro">前言</a><a href="#timeline">關鍵日期</a><a href="#lines">第一話：台詞</a><a href="#hs">第二話：扮裝</a><a href="#chars">認識角色</a><a href="#recap">總結</a><a href="#ai">AI 使用聲明</a>
+</div><div id="bar"></div></nav>
+
+<main>
+<!-- 前言 -->
+<section class="band" id="intro"><div class="wrap">
+  <h2>動漫文化，走進了選戰</h2>
+  <p class="lede">追星、網路迷因與 ACG（動畫、漫畫、遊戲）元素，在這屆選舉特別常見，從候選人的穿搭、造勢、社群發文到政見發表都看得到，相關畫面還在日本社群引發討論。有網友分析，解嚴後成長的世代經歷了社群網路、ACG 全球化與哈日熱潮，如今已是有投票權、也有參選權的公民，自然把熟悉的文化帶進選舉。</p>
+  <p class="lede">不過這類元素範圍很廣，有些難以界定，所以本專題只收兩類界線清楚的例子：<b>候選人親口引用的動畫或漫畫台詞</b>，以及<b>候選人本人扮成的動畫或漫畫角色</b>。作品不限日本，也包括美國動畫與漫威角色。</p>
+</div></section>
+
+<!-- 選舉關鍵日期 -->
+<section class="band" id="timeline" style="background:var(--soft)"><div class="tlpin"><div class="wrap">
+  <h2>選舉關鍵日期</h2>
+  <div class="tl">
+    <svg viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
+      <path id="tlBase" d="M50 0 C95 120 5 250 50 380 S95 620 50 760 S5 920 50 1000"/>
+      <path id="tlLine" pathLength="1" d="M50 0 C95 120 5 250 50 380 S95 620 50 760 S5 920 50 1000"/>
+    </svg>
+    <div class="node"><time>8 月 20 日</time>中選會發布選舉公告。</div>
+    <div class="node"><time>8 月 31 日至 9 月 4 日</time>候選人登記。共 1 萬 9695 人完成登記，角逐 1 萬 1051 個名額。</div>
+    <div class="node"><time>10 月 23 日</time>候選人抽籤決定號次。</div>
+    <div class="node"><time>11 月 13 日至 27 日</time>公辦政見發表會陸續舉行：直轄市長 11 月 13 日起，議員與縣市長 11 月 18 日起。</div>
+    <div class="node vote"><time>11 月 28 日</time>投票日（週六），上午 8 時至下午 4 時投票，投票結束後開票。</div>
+    <div class="node"><time>12 月 4 日</time>公告當選人名單。</div>
+  </div>
+</div></div></section>
+
+<!-- 第一話：台詞 -->
+<section class="band" id="lines"><div class="wrap">
+  <h2>第一話：他們說過的台詞</h2>
+  <p class="lede wide">競選期間，至少有五位候選人在公開場合引用動畫或漫畫台詞，橫跨民進黨、國民黨與民眾黨。<br>他們借用角色的話，說的其實是自己對城市的想像。</p>
+  <div class="stack" id="panels">
+    <article class="panel" style="--i:0">
+      <div class="pq"><div class="bubble">「因為大家一起旅行，才更有意義啊。」<span class="by">——《葬送的芙莉蓮》欣梅爾</span></div></div>
+      <div class="pinfo">
+        <div class="pid">
+          <div class="face"><img src="images/1.jpg" alt="蘇巧慧的競選形象照" decoding="async" style="width:270%;left:-82.3%;top:-63.4%"></div>
+          <div class="pidt">
+            <div class="meta"><span class="chip">民進黨</span></div>
+            <div class="who">蘇巧慧<br><small>新北市長候選人</small></div>
+          </div>
+        </div>
+        <p>出席第 25 屆漫畫博覽會開幕記者會時引用勇者欣梅爾的這句話，表示努力的過程有人同行才更有價值，並說自己正在組建團隊、聚合人才，希望讓新北 29 區從衛星變成繁星。她也提出推動本土與跨國 IP 合作、發展 ACGN 延伸的體驗經濟等政見。</p>
+      </div>
+    </article>
+    <article class="panel" style="--i:1">
+      <div class="pq"><div class="bubble">「這座城市偶爾會讓人失望，但是她還是非常喜歡這座城市。」<span class="by">——《魔女宅急便》琪琪</span></div>
+        <div class="voice">
+          <button class="vbtn" type="button" aria-pressed="false" aria-label="播放原聲">
+            <span class="vfill" aria-hidden="true"></span>
+            <span class="vdisc" aria-hidden="true"><span class="vico"></span></span>
+            <span class="vtxt">聽原聲</span>
+            <span class="vwave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="vtime" aria-hidden="true">0:00</span>
+          </button>
+          <audio preload="metadata" src="audio/voice2.m4a"></audio>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="pid">
+          <div class="face"><img src="images/2.jpg" alt="簡舒培的競選形象照" decoding="async" style="width:250%;left:-75%;top:-40%"></div>
+          <div class="pidt">
+            <div class="meta"><span class="chip">民進黨</span></div>
+            <div class="who">簡舒培<br><small>台北市議員候選人<wbr>（大安、文山）</small></div>
+          </div>
+        </div>
+        <p>在大安森林公園紙風車劇團的萬聖節演出擔任嘉賓，扮成琪琪並引用這句台詞。她說大家都喜歡台北、希望台北更好，鼓勵每個人關心城市、有勇氣提出改變，並把這種行動比喻為大家共同的「小小魔法」。</p>
+      </div>
+    </article>
+    <article class="panel" style="--i:2">
+      <div class="pq"><div class="bubble">「飛向宇宙、浩瀚無垠！」<span class="by">——《玩具總動員》巴斯光年</span></div>
+        <div class="voice">
+          <button class="vbtn" type="button" aria-pressed="false" aria-label="播放原聲">
+            <span class="vfill" aria-hidden="true"></span>
+            <span class="vdisc" aria-hidden="true"><span class="vico"></span></span>
+            <span class="vtxt">聽原聲</span>
+            <span class="vwave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="vtime" aria-hidden="true">0:00</span>
+          </button>
+          <audio preload="metadata" src="audio/voice3.m4a"></audio>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="pid">
+          <div class="face"><img src="images/3.jpg" alt="李四川的競選形象照" decoding="async" style="width:290%;left:-92.1%;top:-39.9%"></div>
+          <div class="pidt">
+            <div class="meta"><span class="chip">國民黨</span></div>
+            <div class="who">李四川<br><small>新北市長候選人</small></div>
+          </div>
+        </div>
+        <p>在「府中搞什麼鬼」萬聖節活動中扮成巴斯光年，與扮成胡迪的市長侯友宜一起喊出這句經典台詞。李四川說，巴斯光年與胡迪是至交好友、最佳拍檔，象徵兩人攜手延續新北市政。</p>
+      </div>
+    </article>
+    <article class="panel" style="--i:3">
+      <div class="pq"><div class="bubble">「燃燒小宇宙！」<span class="by">——《聖鬥士星矢》星矢</span></div></div>
+      <div class="pinfo">
+        <div class="pid">
+          <div class="face"><img src="images/4.jpg" alt="邱臣遠的競選形象照" decoding="async" style="width:270%;left:-101.2%;top:-33.7%"></div>
+          <div class="pidt">
+            <div class="meta"><span class="chip">民眾黨</span></div>
+            <div class="who">邱臣遠<br><small>竹北市長候選人</small></div>
+          </div>
+        </div>
+        <p>在競選總部舉辦萬聖節討糖活動，用這句話形容選戰的最後衝刺。他說《聖鬥士星矢》是許多家長共同的童年回憶，並把作品中守護夥伴、永不放棄的精神，連結到竹北這座年輕有活力的城市。</p>
+      </div>
+    </article>
+    <article class="panel" style="--i:4">
+      <div class="pq"><div class="bubble long">「木葉的同胞都是我身體的一部分，村裡的人都相信我，我也相信著大家，他成為火影，不是為了要發號施令，而是為了和村子裡面，不管先來後到的人，大家一起守護這個家園。」<span class="by">——《火影忍者》千手柱間</span></div>
+        <div class="voice">
+          <button class="vbtn" type="button" aria-pressed="false" aria-label="播放原聲">
+            <span class="vfill" aria-hidden="true"></span>
+            <span class="vdisc" aria-hidden="true"><span class="vico"></span></span>
+            <span class="vtxt">聽原聲</span>
+            <span class="vwave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="vtime" aria-hidden="true">0:00</span>
+          </button>
+          <audio preload="metadata" src="audio/voice1.m4a"></audio>
+        </div>
+      </div>
+      <div class="pinfo">
+        <div class="pid">
+          <div class="face"><img src="images/5.jpg" alt="沈伯洋的生活照" decoding="async" style="width:170%;left:-58.8%;top:-24.8%"></div>
+          <div class="pidt">
+            <div class="meta"><span class="chip">民進黨</span></div>
+            <div class="who">沈伯洋<br><small>台北市長候選人</small></div>
+          </div>
+        </div>
+        <p>在台北市長首場公辦政見發表會的結語引用初代火影千手柱間的這段話。引用前，他提到許多前輩不想改變，表示理解與尊重，但希望對方踏出一小步；引用後，他說當市長不是為了權力或地位，而是因為台北是他出生、成長、成為爸爸的城市。</p>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<!-- 欣梅爾 -->
+<section class="band inter"><div class="wrap">
+  <div class="interGrid">
+    <figure class="ph ph-l">
+      <img src="images/shen.jpg" width="1600" height="1066" loading="lazy" alt="沈伯洋扮成勇者欣梅爾，在人群中向支持者揮手">
+      <figcaption>沈伯洋</figcaption>
+    </figure>
+    <div class="interMid">
+      <div class="num" id="frieren">欣梅爾</div>
+      <p class="lede" style="margin:0 auto;text-align:center">《葬送的芙莉蓮》的勇者欣梅爾，<br>是競選期間最常出現的角色：<br>蘇巧慧引用他的話，<br>沈伯洋與莊競程在萬聖節扮成他。</p>
+    </div>
+    <figure class="ph ph-r">
+      <img src="images/chuang.jpg" width="1567" height="1045" loading="lazy" alt="莊競程扮成勇者欣梅爾，在舞台上與其他扮裝者一起比愛心">
+      <figcaption>莊競程</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<!-- 第二話：扮裝 -->
+<section id="hs">
+  <div class="pin">
+    <h2>第二話：他們扮過的角色</h2>
+    <p class="lede wide">競選期間，至少九位候選人扮成動畫或漫畫角色，橫跨三個政黨。</p>
+    <div class="track" id="track">
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/a.jpg" alt="張媛婷扮成美少女戰士，站在草屯街頭" decoding="async" style="width:240%;left:-75.5%;top:-105.5%"></div><div class="hid"><div class="meta"><span class="chip">民進黨</span><span class="chip work">《美少女戰士》</span></div><div class="who">張媛婷<br><small>草屯鎮長候選人</small></div></div></div>
+        <p>與南投縣長候選人温世政車掃時，以一身「美少女戰士」造型亮相。她說因為車掃完要趕場萬聖節活動，才提前換裝，沒想到意外掀起話題。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/b.jpg" alt="簡舒培扮成琪琪，在台上拿著麥克風旁" decoding="async" style="width:390%;left:-139.2%;top:-66.4%"></div><div class="hid"><div class="meta"><span class="chip">民進黨</span><span class="chip work">《魔女宅急便》琪琪</span></div><div class="who">簡舒培<br><small>台北市議員候選人（大安、文山）</small></div></div></div>
+        <p>在大安森林公園紙風車劇團演出擔任嘉賓，穿上琪琪的黑色小洋裝、手拿飛天掃帚。她說琪琪曾失去勇氣飛不起來，後來為了救朋友重新找回魔法。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/c.jpg" alt="蔡易餘扮成歐爾麥特的萬聖節宣傳照" decoding="async" style="width:270%;left:-81.2%;top:-49.9%"></div><div class="hid"><div class="meta"><span class="chip">民進黨</span><span class="chip work">《我的英雄學院》歐爾麥特</span></div><div class="who">蔡易餘<br><small>嘉義縣長候選人</small></div></div></div>
+        <p>化身「和平象徵」歐爾麥特參加朴子市萬聖節千人踩街。他說歐爾麥特承接歷代「One For All」的力量，就像嘉義縣歷任縣長一棒接一棒，自己已準備好接下一棒。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/d.jpg" alt="沈伯洋扮成欣梅爾，站在車隊上向群眾揮手" decoding="async" style="width:480%;left:-206.8%;top:-113.3%"></div><div class="hid"><div class="meta"><span class="chip">民進黨</span><span class="chip work">《葬送的芙莉蓮》欣梅爾</span></div><div class="who">沈伯洋<br><small>台北市長候選人</small></div></div></div>
+        <p>兩天內三度扮成勇者欣梅爾：大安森林公園紙風車演出、「台北大洋流」車隊掃街，以及松山信義聯合競總成立大會。車掃時有小朋友揮光劍應援，他拿起道具劍笑說「我也有劍」。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/e.jpg" alt="莊競程扮成欣梅爾，蹲下向小朋友派糖" decoding="async" style="width:330%;left:-152.3%;top:-31.4%"></div><div class="hid"><div class="meta"><span class="chip">民進黨</span><span class="chip work">《葬送的芙莉蓮》欣梅爾</span></div><div class="who">莊競程<br><small>新竹市長候選人</small></div></div></div>
+        <p>在競選總部萬聖節活動同樣扮成欣梅爾，取諧音「新Mayor」。報導指出，他與沈伯洋都是學者出身、都挑戰現任市長，號次都抽到 3 號。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/f.jpg" alt="李四川扮成巴斯光年，與扮成胡迪的侯友宜合照" decoding="async" style="width:500%;left:-142.5%;top:-88.4%"></div><div class="hid"><div class="meta"><span class="chip">國民黨</span><span class="chip work">《玩具總動員》巴斯光年</span></div><div class="who">李四川<br><small>新北市長候選人</small></div></div></div>
+        <p>在「府中搞什麼鬼」萬聖節活動扮成巴斯光年，與扮成胡迪的市長侯友宜一起喊出「飛向宇宙、浩瀚無垠」，並沿街分送糖果。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/g.jpg" alt="邱臣遠扮成星矢，伸手比出三號" decoding="async" style="width:310%;left:-72.8%;top:-38.9%"></div><div class="hid"><div class="meta"><span class="chip">民眾黨</span><span class="chip work">《聖鬥士星矢》星矢</span></div><div class="who">邱臣遠<br><small>竹北市長候選人</small></div></div></div>
+        <p>在競選總部萬聖節討糖活動穿上星矢服裝，與大小朋友互動、發送糖果，並喊出選戰最後衝刺要「燃燒小宇宙」。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/h.jpg" alt="吳旭智扮成奇異博士，雙手施法" decoding="async" style="width:340%;left:-116.6%;top:-11.2%"></div><div class="hid"><div class="meta"><span class="chip">國民黨</span><span class="chip work">《奇異博士》</span></div><div class="who">吳旭智<br><small>竹北市長候選人</small></div></div></div>
+        <p>競選總部舉辦萬聖節南瓜燈彩繪，他化身奇異博士和大小朋友欣賞作品、合影，並同場提出「全齡教育支持網」政見。</p>
+      </article>
+      <article class="hcard">
+        <div class="hhead"><div class="hface"><img src="images/i.jpg" alt="許淑華扮成小魔女DoReMi，旁邊是扮成欣梅爾的沈伯洋" decoding="async" style="width:500%;left:-156.5%;top:-60.1%"></div><div class="hid"><div class="meta"><span class="chip">民進黨</span><span class="chip work">《小魔女DoReMi》</span></div><div class="who">許淑華<br><small>台北市議員候選人（松山、信義）</small></div></div></div>
+        <p>在松德公園舉辦松山信義聯合競總成立大會，結合萬聖節派對，以小魔女DoReMi造型亮相，同場沈伯洋扮成勇者欣梅爾。與南投縣長候選人許淑華同名，是不同人。</p>
+      </article>
+    </div>
+    <div class="hnav"><button class="hbtn" id="hPrev" aria-label="上一張">←</button><button class="hbtn" id="hNext" aria-label="下一張">→</button></div>
+  </div>
+</section>
+
+<!-- 角色相牆 -->
+<section class="band" id="chars"><div class="wrap">
+  <h2>不熟動漫？點一點角色就知道</h2>
+  <p class="lede wide">本屆選舉中，候選人引用台詞或扮演的動漫角色共 9 位，其中 7 位來自日本作品、2 位來自美國作品。</p>
+  <div class="drift" id="drift">
+    <button class="dr" type="button" data-i="0" aria-label="查看欣梅爾的資料"><span class="drc"><img src="images/chars/himmel.jpg" alt="欣梅爾的動畫畫面" decoding="async" style="object-position:50% 36%;transform-origin:50% 36%;--z:1.2"></span></button>
+    <button class="dr" type="button" data-i="1" aria-label="查看琪琪的資料"><span class="drc"><img src="images/chars/kiki.jpg" alt="琪琪騎著掃帚，吉吉在背後" decoding="async" style="object-position:50% 40%;transform-origin:50% 40%;--z:1.35"></span></button>
+    <button class="dr" type="button" data-i="2" aria-label="查看巴斯光年的資料"><span class="drc"><img src="images/chars/buzz.jpg" alt="巴斯光年展翅飛行" decoding="async" style="object-position:51% 38%;transform-origin:51% 36%;--z:1.6"></span></button>
+    <button class="dr" type="button" data-i="3" aria-label="查看星矢的資料"><span class="drc"><img src="images/chars/seiya.jpg" alt="穿著射手座黃金聖衣拉弓的星矢" decoding="async" style="object-position:24% 46%;transform-origin:24% 46%;--z:1.25"></span></button>
+    <button class="dr" type="button" data-i="4" aria-label="查看千手柱間的資料"><span class="drc"><img src="images/chars/hashirama.jpg" alt="千手柱間結印" decoding="async" style="object-position:60% 40%;transform-origin:60% 40%;--z:1.15"></span></button>
+    <button class="dr" type="button" data-i="5" aria-label="查看歐爾麥特的資料"><span class="drc"><img src="images/chars/allmight.jpg" alt="歐爾麥特高舉手臂微笑" decoding="async" style="object-position:58% 40%;transform-origin:58% 40%;--z:1.0"></span></button>
+    <button class="dr" type="button" data-i="6" aria-label="查看月野兔的資料"><span class="drc"><img src="images/chars/sailormoon.jpg" alt="美少女戰士擺出招牌姿勢" decoding="async" style="object-position:52% 42%;transform-origin:52% 42%;--z:1.05"></span></button>
+    <button class="dr" type="button" data-i="7" aria-label="查看奇異博士的資料"><span class="drc"><img src="images/chars/strange.jpg" alt="奇異博士站在魔法圓環前" decoding="async" style="object-position:52% 30%;transform-origin:52% 30%;--z:1.0"></span></button>
+    <button class="dr" type="button" data-i="8" aria-label="查看春風DoReMi的資料"><span class="drc"><img src="images/chars/doremi.jpg" alt="小魔女DoReMi施展魔法" decoding="async" style="object-position:46% 46%;transform-origin:46% 46%;--z:1.0"></span></button>
+  </div>
+</div></section>
+
+<!-- 角色資料彈窗 -->
+<div class="modal fade" id="charModal" tabindex="-1" aria-labelledby="cmName" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <button type="button" class="cm-x" data-bs-dismiss="modal" aria-label="關閉">&times;</button>
+      <div class="cm-body">
+        <div class="cm-img"><img id="cmImg" src="" alt=""></div>
+        <div class="cm-txt">
+          <span class="chip work" id="cmWork"></span>
+          <h3 id="cmName"></h3>
+          <p id="cmDesc"></p>
+          <div class="cm-nav">
+            <button type="button" class="cm-b" id="cmPrev" aria-label="上一位角色">&larr; 上一位</button>
+            <span id="cmCount"></span>
+            <button type="button" class="cm-b" id="cmNext" aria-label="下一位角色">下一位 &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 總結 -->
+<section class="band" id="recap"><div class="wrap">
+  <h2>總結：動漫成為選戰新語言</h2>
+  <p class="lede">本專題收錄 14 人次：5 則候選人親口引用的台詞，9 人親自扮成動畫與漫畫角色（同一人既引用台詞又扮裝，兩類各算一次，實際涉及 10 位候選人）。按政黨計，民進黨 9 人次、國民黨 3 人次、民眾黨 2 人次，三個政黨都有人使用。</p>
+  <p class="lede"><b>萬聖節是最大舞台。</b>9 位扮裝的候選人，全部集中在 10 月 26 日至 11 月 1 日之間；5 則台詞裡，也有 3 則出現在 10 月 31 日當天。</p>
+  <p class="lede"><b>日本作品佔多數。</b>14 人次中，11 人次來自日本作品，3 人次來自美國作品（巴斯光年、奇異博士）。《葬送的芙莉蓮》的欣梅爾出現最多，共 3 次。</p>
+  <p class="lede"><b>台詞多談「同伴」。</b>蘇巧慧談「一起旅行」，李四川談「最佳拍檔」，邱臣遠談「守護夥伴」，沈伯洋談「一起守護家園」，借角色說的都是團隊與守護。</p>
+  <p class="lede">動漫梗讓選舉多了一點親切感，但 11 月 28 日投票時，決定票投給誰的，終究還是政見與執行力。</p>
+</div></section>
+</main>
+
+<!-- AI 使用聲明 -->
+<footer id="ai"><div class="band"><div class="wrap">
+  <h2>AI 使用聲明</h2>
+  <p class="lede wide">本網頁的資料整理、文字與程式由 Claude（AI）協助完成；照片、角色圖與錄音並非 AI 生成。</p>
+</div></div></footer>
+
+<!-- 程式 -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+{
+  // 時間軸
+  const $w = $(window);
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const line = document.getElementById('tlLine');
+  const tl = document.querySelector('.tl');
+  const hs = document.getElementById('hs');
+  const tlSec = document.getElementById('timeline');
+  const tlBase = document.getElementById('tlBase');
+  const tlNodes = [...document.querySelectorAll('.node')];
+  const tlDots = tlNodes.map(() => { const d = document.createElement('i'); d.className = 'tdot'; tl.appendChild(d); return d; });
+  let tlFrac = tlNodes.map(() => 0), tlPinned = false;
+  const pinQ = matchMedia('(min-width: 761px) and (min-height: 700px) and (prefers-reduced-motion: no-preference)');
+  function layoutTL(){
+    tlPinned = pinQ.matches;
+    tlSec.classList.toggle('pinned', tlPinned);
+    tlSec.style.height = tlPinned ? (innerHeight * (1 + tlNodes.length * .42)) + 'px' : '';
+    const H = tl.offsetHeight, W = tl.querySelector('svg').getBoundingClientRect().width, total = tlBase.getTotalLength();
+    tlNodes.forEach((n, i) => {
+      const t = n.querySelector('time'), y = t.offsetTop + t.offsetHeight / 2;
+      const vy = y / H * 1000;
+      let lo = 0, hi = total;
+      for (let k = 0; k < 24; k++){ const m = (lo + hi) / 2; if (tlBase.getPointAtLength(m).y < vy) lo = m; else hi = m; }
+      const pt = tlBase.getPointAtLength(lo);
+      tlFrac[i] = lo / total;
+      tlDots[i].style.left = (pt.x / 100 * W) + 'px';
+      tlDots[i].style.top = y + 'px';
+    });
+  }
+  // 橫向捲動卡片
+  const track = document.getElementById('track');
+  const wideQ = matchMedia('(min-width: 761px) and (prefers-reduced-motion: no-preference)');
+  function sizeHS(){
+    if (wideQ.matches){ hs.style.height = (track.scrollWidth - innerWidth + innerHeight) + 'px'; }
+    else { hs.style.height = 'auto'; track.style.transform = ''; }
+  }
+  // 目錄星星
+  const markEl = document.getElementById('mark'), navWrap = document.querySelector('nav .wrap');
+  let lastCur = null, spin = 0;
+  function placeMark(cur){
+    const a = cur && navWrap.querySelector('a[href="#' + cur + '"]');
+    if (!a){ markEl.classList.remove('show'); lastCur = null; return; }
+    if (cur !== lastCur){
+      if (lastCur !== null) spin += 360;
+      markEl.style.setProperty('--r', spin + 'deg');
+      markEl.style.setProperty('--x', (a.offsetLeft + a.offsetWidth / 2 - 8.5) + 'px');
+      markEl.classList.add('show');
+      navWrap.scrollTo({left: a.offsetLeft - navWrap.clientWidth / 2 + a.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth'});
+      lastCur = cur;
+    }
+  }
+  // 捲動時更新
+  function onScroll(){
+    const y = scrollY;
+    const doc = document.documentElement.scrollHeight - innerHeight;
+    $('#bar').css('width', (y / doc * 100) + '%');
+    if (!reduce) $('.layer').each(function(){ $(this).css('translate', '0 ' + (y * $(this).data('speed')) + 'px'); });
+    let p;
+    if (tlPinned){
+      const sr = tlSec.getBoundingClientRect();
+      const span = tlSec.offsetHeight - innerHeight;
+      p = Math.min(1, Math.max(0, -sr.top / span) / .92);
+    } else {
+      const r = tl.getBoundingClientRect();
+      p = Math.min(1, Math.max(0, (innerHeight * .65 - r.top) / r.height));
+    }
+    line.style.strokeDashoffset = 1 - p;
+    tlNodes.forEach((n, i) => { const on = p >= tlFrac[i]; n.classList.toggle('on', on); tlDots[i].classList.toggle('on', on); });
+    if (wideQ.matches){
+      const hr = hs.getBoundingClientRect();
+      const span = hs.offsetHeight - innerHeight;
+      const q = span > 0 ? Math.min(1, Math.max(0, -hr.top / span)) : 0;
+      track.style.transform = 'translateX(' + (-q * (track.scrollWidth - innerWidth)) + 'px)';
+    }
+    let cur = '';
+    $('main section[id], footer[id]').each(function(){ if (this.getBoundingClientRect().top < 120) cur = this.id; });
+    $('nav a').each(function(){ $(this).toggleClass('on', $(this).attr('href') === '#' + cur); });
+    placeMark(cur);
+  }
+  // 進入畫面時觸發動畫
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+  }), {threshold: .35});
+  document.querySelectorAll('.panel, #frieren, .ph').forEach(el => io.observe(el));
+  // 錄音按鈕
+  const voices = [];
+  const mmss = t => { t = Math.max(0, Math.ceil(t)); return Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0'); };
+  $('.voice').each(function(){
+    const box = this, btn = box.querySelector('.vbtn'), au = box.querySelector('audio'),
+          fill = box.querySelector('.vfill'), txt = box.querySelector('.vtxt'), tm = box.querySelector('.vtime');
+    const left = () => { if (au.duration) tm.textContent = mmss(au.duration - au.currentTime); };
+    const set = playing => {
+      btn.setAttribute('aria-pressed', playing);
+      btn.setAttribute('aria-label', (playing ? '暫停' : '播放') + '原聲');
+      txt.textContent = playing ? '播放中' : (au.currentTime > 0.1 && !au.ended ? '繼續播放' : '聽原聲');
+    };
+    voices.push(au);
+    $(btn).on('click', () => { if (au.paused) au.play().catch(() => { txt.textContent = '無法播放'; }); else au.pause(); });
+    $(au).on('loadedmetadata', left)
+      .on('play', () => { voices.forEach(o => { if (o !== au) o.pause(); }); set(true); })
+      .on('pause', () => set(false))
+      .on('ended', () => { fill.style.width = '0%'; au.currentTime = 0; set(false); left(); })
+      .on('timeupdate', () => { if (au.duration) { fill.style.width = (au.currentTime / au.duration * 100) + '%'; left(); } });
+    if (au.readyState >= 1) left();
+  });
+  // 角色相牆（飄動、碰撞）
+  const stage = document.getElementById('drift');
+  const MULT = [1.1, .92, 1, .95, .86, 1.05, 1.15, .9, 1];
+  const PAD = {l: 0, r: 0, t: 0, b: 0};
+  const balls = [...stage.querySelectorAll('.dr')].map((el, i) => ({
+    el, c: el.querySelector('.drc'), i, x: 0, y: 0, vx: 0, vy: 0, r: 40, hold: false, cd: 0, hs: 1,
+    ph: Math.random() * 6.28, wf: .35 + Math.random() * .5
+  }));
+  let SW = 0, SH = 0, TT = 0, wallRun = false, wallVis = false, modalOpen = false, wallInit = false, OB = null;
+  const wallSecEl = document.getElementById('chars'), navEl = document.querySelector('nav');
+  const wallPinQ = matchMedia('(min-width: 861px) and (min-height: 620px)');
+  function calcObstacle(){
+    OB = null; stage.style.top = '';
+    if (!wallPinQ.matches) return;
+    stage.style.top = navEl.offsetHeight + 'px';
+    const sr = stage.getBoundingClientRect(), g = 12;
+    const hs = [...wallSecEl.querySelectorAll('h2, .lede')].map(e => e.getBoundingClientRect());
+    OB = {l: Math.min(...hs.map(r => r.left)) - sr.left - g, r: Math.max(...hs.map(r => r.right)) - sr.left + g,
+          t: -200, b: Math.max(...hs.map(r => r.bottom)) - sr.top + g};
+  }
+  function hitObstacle(b){
+    if (!OB) return;
+    const cx = Math.min(OB.r, Math.max(OB.l, b.x)), cy = Math.min(OB.b, Math.max(OB.t, b.y));
+    let dx = b.x - cx, dy = b.y - cy, d = Math.hypot(dx, dy);
+    if (d >= b.r) return;
+    if (d < 1e-6){ const e = [b.x - OB.l, OB.r - b.x, OB.b - b.y]; const m = Math.min(...e); dx = m === e[0] ? -1 : m === e[1] ? 1 : 0; dy = m === e[2] ? 1 : 0; d = 0; }
+    else { dx /= d; dy /= d; }
+    b.x += dx * (b.r - d); b.y += dy * (b.r - d);
+    const vn = b.vx * dx + b.vy * dy;
+    if (vn < 0){ b.vx -= 2 * vn * dx; b.vy -= 2 * vn * dy; squash(b, Math.abs(dx) > Math.abs(dy) ? 'x' : 'y'); }
+  }
+  const spd = () => (SW < 700 ? .62 : 1);
+  const SINK = .92, WSINK = .94;
+  const vr = b => b.r * b.hs;
+  const cr = b => vr(b);
+  function drawBall(b){ b.el.style.transform = 'translate3d(' + (b.x - b.r) + 'px,' + (b.y - b.r) + 'px,0)'; }
+  function sizeWall(){
+    calcObstacle();
+    const w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return;
+    const first = !wallInit; wallInit = true; SW = w; SH = h;
+    const ms = MULT.reduce((t, m) => t + m * m, 0);
+    const base = Math.max(88, Math.min(260, Math.min(SW * .22, Math.sqrt(SW * SH * .29 * 4 / (Math.PI * ms)))));
+    balls.forEach((b, k) => { b.r = base * MULT[k] / 2; b.el.style.width = b.el.style.height = (b.r * 2) + 'px'; });
+    if (first) placeBalls(); else balls.forEach(b => { b.x = Math.min(SW - PAD.r - b.r, Math.max(PAD.l + b.r, b.x)); b.y = Math.min(SH - PAD.b - b.r, Math.max(PAD.t + b.r, b.y)); hitObstacle(b); drawBall(b); });
+  }
+  function placeBalls(){
+    balls.forEach((b, k) => {
+      for (let t = 0; t < 300; t++){
+        b.x = PAD.l + b.r + Math.random() * (SW - PAD.l - PAD.r - 2 * b.r);
+        b.y = PAD.t + b.r + Math.random() * (SH - PAD.t - PAD.b - 2 * b.r);
+        const clearOB = !OB || Math.hypot(b.x - Math.min(OB.r, Math.max(OB.l, b.x)), b.y - Math.min(OB.b, Math.max(OB.t, b.y))) > b.r + 6;
+        if (clearOB && balls.slice(0, k).every(o => Math.hypot(o.x - b.x, o.y - b.y) > o.r + b.r + 12)) break;
+      }
+      const a = Math.random() * 6.283, sp = (100 + Math.random() * 65) * spd();
+      b.vx = Math.cos(a) * sp; b.vy = Math.sin(a) * sp; drawBall(b);
+    });
+  }
+  function squash(b, axis){
+    if (b.cd > 0 || reduce) return; b.cd = .12;
+    b.c.animate([{transform: 'scale(1)'}, {transform: axis === 'x' ? 'scale(.95,1.03)' : 'scale(1.03,.95)'}, {transform: 'scale(1)'}], {duration: 200, easing: 'ease-out'});
+  }
+  function stepWall(dt){
+    TT += dt;
+    balls.forEach(b => { b.hs += ((b.hold ? 1.07 : 1) - b.hs) * Math.min(1, dt * 12); });
+    balls.forEach(b => {
+      b.cd -= dt; if (b.hold) return;
+      const turn = Math.sin(TT * b.wf + b.ph) * .9 * dt, cs = Math.cos(turn), sn = Math.sin(turn);
+      const vx = b.vx * cs - b.vy * sn, vy = b.vx * sn + b.vy * cs; b.vx = vx; b.vy = vy;
+      b.x += b.vx * dt; b.y += b.vy * dt;
+      if (b.x - b.r * WSINK < PAD.l){ b.x = PAD.l + b.r * WSINK; b.vx = Math.abs(b.vx); squash(b, 'x'); }
+      else if (b.x + b.r * WSINK > SW - PAD.r){ b.x = SW - PAD.r - b.r * WSINK; b.vx = -Math.abs(b.vx); squash(b, 'x'); }
+      if (b.y - b.r * WSINK < PAD.t){ b.y = PAD.t + b.r * WSINK; b.vy = Math.abs(b.vy); squash(b, 'y'); }
+      else if (b.y + b.r * WSINK > SH - PAD.b){ b.y = SH - PAD.b - b.r * WSINK; b.vy = -Math.abs(b.vy); squash(b, 'y'); }
+    });
+    const KS = 520;
+    for (let i = 0; i < balls.length; i++) for (let j = i + 1; j < balls.length; j++){
+      const a = balls[i], b = balls[j]; let dx = b.x - a.x, dy = b.y - a.y; const d = Math.hypot(dx, dy), min = cr(a) + cr(b);
+      if (d >= min || d === 0) continue;
+      dx /= d; dy /= d;
+      const ia = a.hold ? 0 : 1 / (a.r * a.r), ib = b.hold ? 0 : 1 / (b.r * b.r), is = ia + ib; if (!is) continue;
+      const pen = min - d, rv = (b.vx - a.vx) * dx + (b.vy - a.vy) * dy;
+      const acc = KS * pen * dt;
+      a.vx -= acc * ia / is * dx; a.vy -= acc * ia / is * dy; b.vx += acc * ib / is * dx; b.vy += acc * ib / is * dy;
+      if (pen > min * .2){ const ov = pen - min * .2; a.x -= dx * ov * ia / is; a.y -= dy * ov * ia / is; b.x += dx * ov * ib / is; b.y += dy * ov * ib / is; }
+      if (rv < -35 && pen < 14){ const ax = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y'; if (!a.hold) squash(a, ax); if (!b.hold) squash(b, ax); }
+    }
+    balls.forEach(b => {
+      hitObstacle(b);
+      if (b.x - b.r * WSINK < PAD.l){ b.x = PAD.l + b.r * WSINK; if (b.vx < 0) b.vx = -b.vx; }
+      else if (b.x + b.r * WSINK > SW - PAD.r){ b.x = SW - PAD.r - b.r * WSINK; if (b.vx > 0) b.vx = -b.vx; }
+      if (b.y - b.r * WSINK < PAD.t){ b.y = PAD.t + b.r * WSINK; if (b.vy < 0) b.vy = -b.vy; }
+      else if (b.y + b.r * WSINK > SH - PAD.b){ b.y = SH - PAD.b - b.r * WSINK; if (b.vy > 0) b.vy = -b.vy; }
+    });
+    const lo = 88 * spd(), hi = 175 * spd();
+    balls.forEach(b => { if (b.hold) return; const v = Math.hypot(b.vx, b.vy) || 1, t = Math.min(hi, Math.max(lo, v)); b.vx *= t / v; b.vy *= t / v; drawBall(b); });
+  }
+  let wallLast = 0;
+  function wallFrame(ts){
+    if (!wallRun) return;
+    const dt = Math.min(.05, (ts - wallLast) / 1000 || 0); wallLast = ts;
+    const n = Math.max(1, Math.ceil(dt * 340 / (Math.min(...balls.map(b => b.r)) * .5)));
+    for (let k = 0; k < n; k++) stepWall(dt / n);
+    requestAnimationFrame(wallFrame);
+  }
+  function wallSync(){
+    const want = wallVis && !modalOpen && !reduce && !document.hidden;
+    if (want && !wallRun){ wallRun = true; wallLast = performance.now(); requestAnimationFrame(wallFrame); } else if (!want) wallRun = false;
+  }
+  new IntersectionObserver(es => { wallVis = es[0].isIntersecting; wallSync(); }).observe(stage);
+  document.addEventListener('visibilitychange', wallSync);
+  wallPinQ.addEventListener('change', sizeWall);
+  balls.forEach(b => {
+    const on = () => { b.hold = true; }, off = () => { b.hold = false; };
+    b.el.addEventListener('pointerenter', on); b.el.addEventListener('pointerleave', off);
+    b.el.addEventListener('focus', on); b.el.addEventListener('blur', off);
+  });
+  document.getElementById('charModal').addEventListener('show.bs.modal', () => { modalOpen = true; wallSync(); });
+  document.getElementById('charModal').addEventListener('hidden.bs.modal', () => { modalOpen = false; balls.forEach(b => { b.hold = false; }); wallSync(); });
+  sizeWall();
+  // 角色資料彈窗
+  const CH = [{"n": "欣梅爾", "w": "《葬送的芙莉蓮》", "d": "帶領隊伍打倒魔王的人類勇者。故事開始時他已年老離世，長壽的精靈魔法使芙莉蓮，才回頭重走當年的旅途，重新認識「人類」。", "f": "himmel", "a": "欣梅爾的動畫畫面", "p": "50% 36%"}, {"n": "琪琪", "w": "《魔女宅急便》", "d": "十三歲的見習魔女。依傳統離家獨立生活一年，騎著掃帚、帶著黑貓吉吉，在海邊城鎮開起送貨的「宅急便」，途中一度失去飛行的魔法。", "f": "kiki", "a": "琪琪騎著掃帚，吉吉在背後", "p": "50% 40%"}, {"n": "巴斯光年", "w": "《玩具總動員》", "d": "太空騎警造型的玩具。起初他以為自己真的是太空英雄，後來和牛仔玩具胡迪從對手變成最佳拍檔。招牌台詞是「飛向宇宙、浩瀚無垠」。", "f": "buzz", "a": "巴斯光年展翅飛行", "p": "55% 30%"}, {"n": "星矢", "w": "《聖鬥士星矢》", "d": "原是天馬座的青銅聖鬥士，為了守護女神雅典娜而戰。他靠燃燒體內的「小宇宙」發揮超越極限的力量，是許多人的童年回憶。圖中是他後來穿上的射手座黃金聖衣。", "f": "seiya", "a": "穿著射手座黃金聖衣拉弓的星矢", "p": "0% 50%"}, {"n": "千手柱間", "w": "《火影忍者》", "d": "初代火影，木葉隱村的創立者，以強大的木遁忍術聞名。他的理想，是讓各個忍者家族不再互相殺戮、一起守護村子。", "f": "hashirama", "a": "千手柱間結印", "p": "64% 40%"}, {"n": "歐爾麥特", "w": "《我的英雄學院》", "d": "被稱為「和平象徵」的第一名英雄。他把代代相傳的「One For All」力量，傳給了主角綠谷出久。", "f": "allmight", "a": "歐爾麥特高舉手臂微笑", "p": "64% 38%"}, {"n": "月野兔", "w": "《美少女戰士》", "d": "月野兔是故事的主角，本是平凡的國中生，變身後成為穿水手服、替月亮懲罰壞人的「美少女戰士」，是經典魔法少女的代表。", "f": "sailormoon", "a": "美少女戰士擺出招牌姿勢", "p": "54% 36%"}, {"n": "奇異博士", "w": "《奇異博士》", "d": "原是天才外科醫生，車禍傷了雙手後學習魔法，成為守護地球、對抗魔法威脅的「至尊法師」，紅色披風是他的標誌。", "f": "strange", "a": "奇異博士站在魔法圓環前", "p": "50% 22%"}, {"n": "春風DoReMi", "w": "《小魔女DoReMi》", "d": "春風DoReMi 是故事的主角，一個普通的小學生，因為機緣成為「魔女見習生」，和朋友們一邊上學，一邊學習魔法。", "f": "doremi", "a": "小魔女DoReMi施展魔法", "p": "37% 40%"}];
+  const cmEl = document.getElementById('charModal'), cm = new bootstrap.Modal(cmEl);
+  let cmI = 0;
+  function showChar(i){
+    cmI = (i + CH.length) % CH.length; const c = CH[cmI];
+    $('#cmImg').attr({src: 'images/chars/' + c.f + '.jpg', alt: c.a}).css('object-position', c.p);
+    $('#cmWork').text(c.w); $('#cmName').text(c.n); $('#cmDesc').text(c.d);
+    $('#cmCount').text((cmI + 1) + ' / ' + CH.length);
+  }
+  $('.dr').on('click', function(){ showChar(+this.dataset.i); cm.show(); });
+  $('#cmPrev').on('click', () => showChar(cmI - 1));
+  $('#cmNext').on('click', () => showChar(cmI + 1));
+  $(cmEl).on('keydown', e => { if (e.key === 'ArrowLeft') showChar(cmI - 1); if (e.key === 'ArrowRight') showChar(cmI + 1); });
+  // 橫向卡片按鈕
+  const step = () => (track.querySelector('.hcard').offsetWidth + 26);
+  $('#hPrev').on('click', () => track.scrollBy({left: -step(), behavior: 'smooth'}));
+  $('#hNext').on('click', () => track.scrollBy({left: step(), behavior: 'smooth'}));
+  $(track).on('keydown', e => { if (e.key === 'ArrowRight') $('#hNext').click(); if (e.key === 'ArrowLeft') $('#hPrev').click(); });
+  track.tabIndex = 0;
+  // 事件與初始化
+  $w.on('scroll', () => requestAnimationFrame(onScroll));
+  $w.on('resize', () => { layoutTL(); sizeHS(); sizeWall(); lastCur = null; onScroll(); });
+  wideQ.addEventListener('change', () => { sizeHS(); onScroll(); });
+  layoutTL(); sizeHS(); onScroll();
+  document.fonts && document.fonts.ready.then(() => { layoutTL(); sizeHS(); sizeWall(); onScroll(); });
+  pinQ.addEventListener('change', () => { layoutTL(); sizeWall(); onScroll(); });
+}
+</script>
+</body>
+</html>
